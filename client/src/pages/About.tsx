@@ -51,7 +51,6 @@ export default function AboutPage() {
           </motion.div>
         </div>
       </main>
-      <Footer />
     </div>
   );
 }

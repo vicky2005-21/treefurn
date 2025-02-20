@@ -49,8 +49,8 @@ export default function Home() {
         <Features />
         <Testimonials />
         <Contact />
-        <Footer />
       </main>
+      <Footer />
     </motion.div>
   );
 }

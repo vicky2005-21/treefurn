@@ -1,11 +1,11 @@
-import { motion, useAnimation } from "framer-motion";
+
+import { motion } from "framer-motion";
 import { Button } from "@/components/ui/button";
-import { useEffect, useState } from "react";
 import { Link } from "wouter";
+import { useState, useEffect } from "react";
 
 const Counter = ({ end, duration = 2, label }: { end: number | string, duration?: number, label: string }) => {
   const [count, setCount] = useState(0);
-  const controls = useAnimation();
 
   useEffect(() => {
     let startTimestamp: number;
@@ -62,72 +62,60 @@ export default function Hero() {
   return (
     <section
       id="home"
-      className="min-h-[90vh] relative flex items-center justify-center overflow-hidden bg-gradient-to-b from-[#f8f3e9] to-white dark:from-gray-900 dark:to-gray-800"
+      className="min-h-[90vh] relative flex items-center justify-center bg-gradient-to-b from-[#f8f3e9] to-white dark:from-gray-900 dark:to-gray-800"
     >
-
       <div className="container mx-auto px-4 relative z-10">
-        <motion.div
-          initial={{ opacity: 0, y: 20 }}
-          animate={{ opacity: 1, y: 0 }}
-          transition={{ duration: 0.8 }}
-          className="text-center max-w-4xl mx-auto"
-        >
-          <motion.div
-            initial={{ scale: 0.8, opacity: 0 }}
-            animate={{ scale: 1, opacity: 1 }}
-            transition={{ duration: 1, delay: 0.2 }}
-            className="mb-8"
-          >
-
-          </motion.div>
-
-          <motion.h1
-            initial={{ opacity: 0, y: 20 }}
-            animate={{ opacity: 1, y: 0 }}
-            transition={{ duration: 0.8, delay: 0.4 }}
-            className="text-3xl md:text-6xl font-bold mb-6 text-gray-900 dark:text-white font-serif"
-          >
-            Transform Your Space with Premium Furniture
-          </motion.h1>
-
-          <motion.p
-            initial={{ opacity: 0, y: 20 }}
-            animate={{ opacity: 1, y: 0 }}
-            transition={{ duration: 0.8, delay: 0.6 }}
-            className="text-lg md:text-2xl mb-8 text-gray-600 dark:text-gray-300 font-serif"
-          >
-            Tirupati's Largest Furniture Showroom – Explore 5 Floors of Luxury, 
-            Custom Designs, and a 5-Year Warranty!
-          </motion.p>
-
-          <Stats />
-
+        <div className="flex flex-col gap-8">
           <motion.div
             initial={{ opacity: 0, y: 20 }}
             animate={{ opacity: 1, y: 0 }}
-            transition={{ duration: 0.8, delay: 0.8 }}
-            className="flex flex-col sm:flex-row gap-4 justify-center"
+            transition={{ duration: 0.8 }}
+            className="text-center"
           >
-            <Link href="/collections">
+            <h1 className="text-3xl md:text-6xl font-bold mb-6 text-gray-900 dark:text-white font-serif">
+              Transform Your Space with Premium Furniture
+            </h1>
+
+            <p className="text-lg md:text-2xl mb-8 text-gray-600 dark:text-gray-300 font-serif">
+              Tirupati's Largest Furniture Showroom – Explore 5 Floors of Luxury, 
+              Custom Designs, and a 5-Year Warranty!
+            </p>
+
+            <motion.div
+              initial={{ opacity: 0, scale: 0.8 }}
+              animate={{ opacity: 1, scale: 1 }}
+              transition={{ duration: 1 }}
+            >
+              <img
+                src="https://images.unsplash.com/photo-1631679706909-1844bbd07221"
+                alt="Luxury Furniture"
+                className="w-full max-w-4xl mx-auto rounded-2xl shadow-2xl"
+              />
+            </motion.div>
+
+            <Stats />
+
+            <div className="flex flex-col sm:flex-row gap-4 justify-center">
+              <Link href="/collections">
+                <Button
+                  size="lg"
+                  className="bg-primary hover:bg-primary/90 text-white text-lg px-8 py-6 font-serif"
+                >
+                  Explore Collections
+                </Button>
+              </Link>
               <Button
                 size="lg"
-                className="bg-primary hover:bg-primary/90 text-white text-lg px-8 py-6 font-serif"
+                variant="outline"
+                className="border-primary text-primary hover:bg-primary/10 text-lg px-8 py-6 font-serif dark:text-white dark:border-white"
+                onClick={() => document.querySelector('#contact')?.scrollIntoView({ behavior: 'smooth' })}
               >
-                Explore Collections
+                Book a Free Consultation
               </Button>
-            </Link>
-            <Button
-              size="lg"
-              variant="outline"
-              className="border-primary text-primary hover:bg-primary/10 text-lg px-8 py-6 font-serif dark:text-white dark:border-white"
-              onClick={() => document.querySelector('#contact')?.scrollIntoView({ behavior: 'smooth' })}
-            >
-              Book a Free Consultation
-            </Button>
+            </div>
           </motion.div>
-        </motion.div>
+        </div>
       </div>
-
     </section>
   );
 }
