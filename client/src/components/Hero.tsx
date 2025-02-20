@@ -1,3 +1,4 @@
+
 import { motion } from "framer-motion";
 import { Button } from "@/components/ui/button";
 import { Link } from "wouter";
@@ -79,31 +80,22 @@ export default function Hero() {
               Tirupati's Largest Furniture Showroom – Explore 5 Floors of Luxury, 
               Custom Designs, and a 5-Year Warranty!
             </p>
-          </motion.div>
 
-          <motion.div
-            initial={{ opacity: 0, scale: 0.8 }}
-            animate={{ opacity: 1, scale: 1 }}
-            transition={{ duration: 1 }}
-          >
-            <img
-              src="https://images.unsplash.com/photo-1631679706909-1844bbd07221"
-              alt="Luxury Furniture"
-              className="w-full max-w-4xl mx-auto rounded-2xl shadow-2xl"
-            />
-          </motion.div>
-            <h1 className="text-3xl md:text-6xl font-bold mb-6 text-gray-900 dark:text-white font-serif">
-              Transform Your Space with Premium Furniture
-            </h1>
-
-            <p className="text-lg md:text-2xl mb-8 text-gray-600 dark:text-gray-300 font-serif">
-              Tirupati's Largest Furniture Showroom – Explore 5 Floors of Luxury, 
-              Custom Designs, and a 5-Year Warranty!
-            </p>
+            <motion.div
+              initial={{ opacity: 0, scale: 0.8 }}
+              animate={{ opacity: 1, scale: 1 }}
+              transition={{ duration: 1 }}
+            >
+              <img
+                src="https://images.unsplash.com/photo-1631679706909-1844bbd07221"
+                alt="Luxury Furniture"
+                className="w-full max-w-4xl mx-auto rounded-2xl shadow-2xl"
+              />
+            </motion.div>
 
             <Stats />
 
-            <div className="flex flex-col sm:flex-row gap-4 justify-center md:justify-start">
+            <div className="flex flex-col sm:flex-row gap-4 justify-center">
               <Link href="/collections">
                 <Button
                   size="lg"
