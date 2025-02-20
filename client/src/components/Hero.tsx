@@ -64,26 +64,34 @@ export default function Hero() {
       className="min-h-[90vh] relative flex items-center justify-center bg-gradient-to-b from-[#f8f3e9] to-white dark:from-gray-900 dark:to-gray-800"
     >
       <div className="container mx-auto px-4 relative z-10">
-        <div className="grid md:grid-cols-2 gap-12 items-center">
-          <motion.div
-            initial={{ opacity: 0, scale: 0.8 }}
-            animate={{ opacity: 1, scale: 1 }}
-            transition={{ duration: 1 }}
-            className="order-2 md:order-1"
-          >
-            <img
-              src="https://images.unsplash.com/photo-1631679706909-1844bbd07221"
-              alt="Luxury Furniture"
-              className="w-full rounded-2xl shadow-2xl"
-            />
-          </motion.div>
-
+        <div className="flex flex-col gap-8">
           <motion.div
             initial={{ opacity: 0, y: 20 }}
             animate={{ opacity: 1, y: 0 }}
             transition={{ duration: 0.8 }}
-            className="text-center md:text-left order-1 md:order-2"
+            className="text-center"
           >
+            <h1 className="text-3xl md:text-6xl font-bold mb-6 text-gray-900 dark:text-white font-serif">
+              Transform Your Space with Premium Furniture
+            </h1>
+
+            <p className="text-lg md:text-2xl mb-8 text-gray-600 dark:text-gray-300 font-serif">
+              Tirupati's Largest Furniture Showroom – Explore 5 Floors of Luxury, 
+              Custom Designs, and a 5-Year Warranty!
+            </p>
+          </motion.div>
+
+          <motion.div
+            initial={{ opacity: 0, scale: 0.8 }}
+            animate={{ opacity: 1, scale: 1 }}
+            transition={{ duration: 1 }}
+          >
+            <img
+              src="https://images.unsplash.com/photo-1631679706909-1844bbd07221"
+              alt="Luxury Furniture"
+              className="w-full max-w-4xl mx-auto rounded-2xl shadow-2xl"
+            />
+          </motion.div>
             <h1 className="text-3xl md:text-6xl font-bold mb-6 text-gray-900 dark:text-white font-serif">
               Transform Your Space with Premium Furniture
             </h1>
