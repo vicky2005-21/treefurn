@@ -1,6 +1,7 @@
 import { motion } from "framer-motion";
 import { useInView } from "framer-motion";
 import { useRef } from "react";
+import { Button } from "@/components/ui/button";
 
 export default function About() {
   const ref = useRef(null);
@@ -19,9 +20,9 @@ export default function About() {
             }}
           >
             <img
-              src="https://images.unsplash.com/photo-1573484651903-701771f712be"
+              src="https://images.unsplash.com/photo-1631679706909-1844bbd07221"
               alt="Tree Furn Plaza Showroom"
-              className="rounded-lg shadow-xl"
+              className="rounded-lg shadow-xl w-full h-[500px] object-cover"
             />
           </motion.div>
 
@@ -33,20 +34,27 @@ export default function About() {
             }}
           >
             <h2 className="text-4xl font-bold mb-6 text-gray-900">
-              Crafting Luxury Living Spaces
+              Crafting Premium Living Spaces Since 1995
             </h2>
             <p className="text-lg text-gray-600 mb-6">
-              Tree Furn Plaza stands as Tirupati's premier destination for luxury furniture, 
-              where traditional craftsmanship meets contemporary design. Our 5-floor showroom 
-              showcases an exclusive collection of handcrafted pieces, each telling its own 
-              unique story of elegance and sophistication.
+              Tree Furn Plaza has been at the forefront of luxury furniture design and 
+              manufacturing for over two decades. Our commitment to quality craftsmanship 
+              and sustainable practices has made us Tirupati's most trusted furniture destination.
             </p>
             <p className="text-lg text-gray-600 mb-6">
-              With over two decades of excellence in custom manufacturing, we've established 
-              ourselves as the trusted name in premium furniture. Our commitment to quality 
-              is reflected in our industry-leading 5-year warranty and our dedication to 
-              sustainable practices.
+              With a blend of traditional expertise and contemporary innovation, we create 
+              pieces that transcend mere functionality to become lasting symbols of elegance 
+              in your living spaces.
             </p>
+            <div className="mt-8">
+              <Button
+                size="lg"
+                variant="outline"
+                className="border-primary text-primary hover:bg-primary/10 text-lg px-8 py-6"
+              >
+                Learn More About Our Craft
+              </Button>
+            </div>
           </motion.div>
         </div>
       </div>

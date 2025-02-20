@@ -12,15 +12,15 @@ const LeafAnimation = () => {
       transition: {
         duration: 8,
         repeat: Infinity,
-        repeatType: "loop",
+        repeatType: "loop" as const,
         ease: "linear"
       }
     }
   };
 
   return (
-    <div className="absolute inset-0 overflow-hidden pointer-events-none">
-      {[...Array(6)].map((_, i) => (
+    <div className="fixed inset-0 overflow-hidden pointer-events-none z-0">
+      {[...Array(12)].map((_, i) => (
         <motion.div
           key={i}
           className="absolute"
@@ -42,6 +42,32 @@ const LeafAnimation = () => {
           >
             <path d="M21.88,11.37c-1.88,2.37-4.02,2.78-6.66,1.89c-0.15-0.05-0.32-0.1-0.49-0.14c0.95,1.17,1.67,2.53,2.11,4.04 c0.26,0.91-0.48,1.8-1.44,1.8H8.6c-0.96,0-1.7-0.89-1.44-1.8c0.44-1.51,1.16-2.87,2.11-4.04c-0.17,0.04-0.34,0.09-0.49,0.14 C6.14,14.15,3.99,13.74,2.12,11.37C1.71,10.85,1.72,10.09,2.13,9.57c2.06-2.59,4.77-3.59,7.16-2.91C9.14,5.04,9.77,3.37,11.05,2 c0.49-0.52,1.41-0.52,1.9,0c1.28,1.37,1.91,3.04,1.76,4.66c2.39-0.68,5.1,0.32,7.16,2.91C22.28,10.09,22.29,10.85,21.88,11.37z"/>
           </svg>
+        </motion.div>
+      ))}
+    </div>
+  );
+};
+
+const Stats = () => {
+  const stats = [
+    { number: "25+", label: "Years of Excellence" },
+    { number: "10K+", label: "Happy Customers" },
+    { number: "5000+", label: "Furniture Pieces" },
+    { number: "100%", label: "Quality Assured" }
+  ];
+
+  return (
+    <div className="grid grid-cols-2 md:grid-cols-4 gap-8 my-12">
+      {stats.map((stat, index) => (
+        <motion.div
+          key={index}
+          initial={{ opacity: 0, y: 20 }}
+          animate={{ opacity: 1, y: 0 }}
+          transition={{ duration: 0.5, delay: index * 0.1 }}
+          className="text-center"
+        >
+          <h3 className="text-4xl font-bold text-primary mb-2">{stat.number}</h3>
+          <p className="text-gray-600">{stat.label}</p>
         </motion.div>
       ))}
     </div>
@@ -94,6 +120,8 @@ export default function Hero() {
             Tirupati's Largest Furniture Showroom – Explore 5 Floors of Luxury, 
             Custom Designs, and a 5-Year Warranty!
           </motion.p>
+
+          <Stats />
 
           <motion.div
             initial={{ opacity: 0, y: 20 }}
