@@ -81,10 +81,10 @@ export default function Navigation() {
       <motion.div 
         initial={{ y: 100 }}
         animate={{ y: 0 }}
-        className="md:hidden fixed bottom-6 left-1/2 -translate-x-1/2 z-50"
+        className="md:hidden fixed bottom-6 inset-x-0 z-50 flex justify-center"
       >
         <motion.div 
-          className="flex items-center gap-8 backdrop-blur-md bg-white/90 rounded-full shadow-lg px-8 py-3"
+          className="flex items-center justify-center gap-8 backdrop-blur-md bg-white/90 rounded-full shadow-lg px-8 py-3 mx-4"
           whileHover={{ scale: 1.02 }}
         >
           {navLinks.map((link) => {
