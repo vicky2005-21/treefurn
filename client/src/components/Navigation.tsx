@@ -6,8 +6,8 @@ import { Link, useLocation } from "wouter";
 const navLinks = [
   { name: "Home", href: "/", icon: Home },
   { name: "Collections", href: "/collections", icon: Grid },
-  { name: "About", href: "/about", icon: Info },
-  { name: "Contact", href: "/contact", icon: Phone }
+  { name: "About", href: "/#about", icon: Info },
+  { name: "Contact", href: "/#contact", icon: Phone }
 ];
 
 export default function Navigation() {
@@ -21,6 +21,15 @@ export default function Navigation() {
     window.addEventListener("scroll", handleScroll);
     return () => window.removeEventListener("scroll", handleScroll);
   }, []);
+
+  const handleNavClick = (href: string) => {
+    if (href.startsWith('/#')) {
+      const element = document.querySelector(href.substring(1));
+      if (element) {
+        element.scrollIntoView({ behavior: 'smooth' });
+      }
+    }
+  };
 
   return (
     <>
@@ -54,6 +63,7 @@ export default function Navigation() {
                 >
                   <Link 
                     href={link.href}
+                    onClick={() => handleNavClick(link.href)}
                     className={`text-gray-600 hover:text-primary transition-colors text-sm font-medium ${
                       location === link.href ? "text-primary" : ""
                     }`}
@@ -87,6 +97,7 @@ export default function Navigation() {
               >
                 <Link 
                   href={link.href}
+                  onClick={() => handleNavClick(link.href)}
                   className={`text-gray-600 hover:text-primary transition-colors ${
                     location === link.href ? "text-primary" : ""
                   }`}

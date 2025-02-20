@@ -10,7 +10,7 @@ const LeafAnimation = () => {
       y: Math.random() * -100,
       x: Math.random() * window.innerWidth,
       rotate: 0,
-      scale: 0.5 + Math.random() * 0.5,
+      scale: 0.8 + Math.random() * 0.7, // Increased scale for bigger leaves
     }),
     animate: (i: number) => ({ 
       opacity: [0, 1, 1, 0],
@@ -28,7 +28,7 @@ const LeafAnimation = () => {
       ],
       rotate: [0, 180 + Math.random() * 180, 360 + Math.random() * 360],
       transition: {
-        duration: 8 + Math.random() * 4,
+        duration: 12 + Math.random() * 8, // Increased duration for slower movement
         repeat: Infinity,
         repeatType: "loop" as const,
         ease: "easeInOut"
@@ -38,13 +38,13 @@ const LeafAnimation = () => {
 
   return (
     <div className="fixed inset-0 overflow-hidden pointer-events-none z-0">
-      {[...Array(20)].map((_, i) => (
+      {[...Array(15)].map((_, i) => (
         <motion.div
           key={i}
           className="absolute"
           style={{
-            width: "30px",
-            height: "30px",
+            width: "40px", // Increased size
+            height: "40px", // Increased size
           }}
           custom={i}
           variants={leafVariants}
