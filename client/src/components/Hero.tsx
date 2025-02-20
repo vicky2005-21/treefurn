@@ -38,28 +38,41 @@ const LeafAnimation = () => {
 
   return (
     <div className="fixed inset-0 overflow-hidden pointer-events-none z-0">
-      {[...Array(15)].map((_, i) => (
-        <motion.div
-          key={i}
-          className="absolute"
-          style={{
-            width: "40px", // Increased size
-            height: "40px", // Increased size
-          }}
-          custom={i}
-          variants={leafVariants}
-          initial="initial"
-          animate="animate"
-        >
-          <svg
-            viewBox="0 0 24 24"
-            className="w-full h-full text-green-500/40"
-            fill="currentColor"
+      {[...Array(15)].map((_, i) => {
+        const randomDelay = Math.random() * 5;
+        const randomX = Math.random() * 100;
+        
+        return (
+          <motion.div
+            key={i}
+            className="absolute"
+            style={{
+              width: "40px",
+              height: "40px",
+              left: `${randomX}%`
+            }}
+            initial={{ y: -100, opacity: 0, rotate: 0 }}
+            animate={{ 
+              y: "120vh",
+              opacity: [0, 1, 1, 0],
+              rotate: 360,
+            }}
+            transition={{
+              duration: 8,
+              delay: randomDelay,
+              repeat: Infinity,
+              ease: "linear"
+            }}
           >
-            <path d="M21.88,11.37c-1.88,2.37-4.02,2.78-6.66,1.89c-0.15-0.05-0.32-0.1-0.49-0.14c0.95,1.17,1.67,2.53,2.11,4.04 c0.26,0.91-0.48,1.8-1.44,1.8H8.6c-0.96,0-1.7-0.89-1.44-1.8c0.44-1.51,1.16-2.87,2.11-4.04c-0.17,0.04-0.34,0.09-0.49,0.14 C6.14,14.15,3.99,13.74,2.12,11.37C1.71,10.85,1.72,10.09,2.13,9.57c2.06-2.59,4.77-3.59,7.16-2.91C9.14,5.04,9.77,3.37,11.05,2 c0.49-0.52,1.41-0.52,1.9,0c1.28,1.37,1.91,3.04,1.76,4.66c2.39-0.68,5.1,0.32,7.16,2.91C22.28,10.09,22.29,10.85,21.88,11.37z"/>
-          </svg>
-        </motion.div>
-      ))}
+            {/* Replace the SVG with your image. You can pass an array of image URLs as props */}
+            <img 
+              src="/path-to-your-leaf-image.png" 
+              alt="leaf"
+              className="w-full h-full object-contain opacity-40"
+            />
+          </motion.div>
+        );
+      })}
     </div>
   );
 };
