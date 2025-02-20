@@ -1,0 +1,78 @@
+Create a modern, high-end landing page for Tree Furn Plaza—a premium furniture showroom with a lush, nature-inspired aesthetic. The design must evoke luxury and exclusivity while integrating dynamic animations, interactive features, and a responsive layout optimized for all devices.
+
+Overall Aesthetic & Tone:
+
+Color Palette: Use a blend of rich green and warm brown hues inspired by trees and nature. Incorporate bench-like color elements with added transparency for a refined, organic feel.
+Style: Elegant, modern, and luxurious with clean typography, high-quality visuals, and subtle yet engaging animations.
+Key Features & Sections:
+
+Navigation Bar:
+
+Desktop:
+A slim, fixed top navigation bar with a floating, curved design.
+Should stretch across the screen, leaving subtle margins on each side.
+Use a blend of bench color and transparency.
+Mobile:
+A bottom-centered, floating curved navigation bar.
+Ensure it adapts responsively, maintaining usability and aesthetics.
+Interactivity:
+Smooth floating animations on page load.
+The navbar should dynamically adjust (stretch and contract) based on screen size and responsiveness.
+Single-Page Layout with Section Navigation:
+
+Create a one-page design where “About” and “Contact” are individual sections on the same page.
+Users can click on navbar links to smoothly scroll to the respective sections.
+Implement animated section transitions (e.g., numbers counting from zero to the final value, content sliding in from below as the user scrolls).
+Hero Section:
+
+Background: Full-screen background image or video showcasing the showroom’s elegance.
+Headline: “Transform Your Space with Premium Furniture – You Can’t Buy Better Than This!”
+Subheadline: “Tirupati’s Largest Furniture Showroom – Explore 5 Floors of Luxury, Custom Designs, and a 5-Year Warranty!”
+CTAs: Two buttons labeled “Explore Collections” and “Book a Free Consultation.”
+About Section:
+
+Split-screen layout with a high-quality image of the showroom on one side.
+Provide a brief history and overview of Tree Furn Plaza, emphasizing quality, custom manufacturing capabilities, and the premium nature of the showroom.
+Include a “Contact” section at the bottom of the page for direct access.
+Product Showcase / Collections:
+
+Display multiple product categories (e.g., Home Furniture, Office Furniture, Decorative Items) in a grid or carousel format.
+Each category (or “collection”) should have a side heading; clicking on it opens a new page or section with more details.
+Apply smooth hover effects, fade-in animations, and animated counters (numbers animate from zero to their final value).
+Why Choose Us:
+
+Present USPs with icon-based animations. Key points include a 5-year warranty, custom designs, bulk orders, and custom manufacturing capabilities.
+Use subtle motion effects to draw attention to each USP.
+Testimonials:
+
+Implement a sliding carousel that scrolls through customer reviews.
+Incorporate text animations, such as content coming up from below as the user scrolls.
+Showroom Location & Contact:
+
+Embed an interactive Google Map to showcase the showroom’s location.
+Clearly display contact details and include a feature for visitors to send a WhatsApp message directly.
+Tree Animations & Visual Effects:
+
+Integrate smooth tree animations (e.g., gently swaying leaves or branches) throughout the page.
+Consider a bench-type animation or background models that enhance the natural theme.
+Use parallax scrolling and fade-in effects to create an immersive experience.
+Footer:
+
+Include comprehensive contact details, social media links, and a newsletter signup form.
+Ensure the footer design remains consistent with the overall green and brown, nature-inspired aesthetic.
+SEO & Technical Requirements:
+
+Optimize for fast page load speeds and mobile responsiveness.
+Use clean, semantic HTML with appropriate heading hierarchies (H1, H2, etc.).
+Include meta tags (title, description) and alt text for all images.
+Implement schema markup for local business details to boost local SEO.
+Ensure that code is efficient and enhances both user experience and search engine crawlability.
+Animations & Interactivity:
+
+Floating Elements: Use smooth floating animations on load (e.g., for the navbar and key CTAs).
+Section Transitions: Animate sections as they come into view (e.g., text sliding up, numbers counting dynamically).
+Hover & Scroll Effects: Ensure hover animations for product showcases and subtle scroll-triggered animations throughout the page.
+Responsive Design:
+
+Desktop: Fixed top navbar that spans the screen with elegant margins, ensuring easy navigation.
+Mobile/Tablet: Navbar repositioned to a bottom-centered floating layout, ensuring optimal usability and visual appeal on smaller screens.
