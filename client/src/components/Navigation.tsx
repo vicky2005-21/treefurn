@@ -84,7 +84,7 @@ export default function Navigation() {
         className="md:hidden fixed bottom-6 inset-x-0 z-50 flex justify-center"
       >
         <motion.div 
-          className="flex items-center justify-center gap-8 backdrop-blur-md bg-white/90 rounded-full shadow-lg px-8 py-3 mx-4"
+          className="flex items-center justify-center gap-8 backdrop-blur-md bg-white/90 rounded-full shadow-lg px-8 py-4 mx-4"
           whileHover={{ scale: 1.02 }}
         >
           {navLinks.map((link) => {

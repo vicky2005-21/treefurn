@@ -54,11 +54,12 @@ export default function Collections() {
               transition={{ duration: 0.5, delay: index * 0.1 }}
               viewport={{ once: true }}
             >
-              <Card
-                className="overflow-hidden cursor-pointer group"
-                onMouseEnter={() => setHoveredIndex(index)}
-                onMouseLeave={() => setHoveredIndex(null)}
-              >
+              <Link href="/collections">
+                <Card
+                  className="overflow-hidden cursor-pointer group"
+                  onMouseEnter={() => setHoveredIndex(index)}
+                  onMouseLeave={() => setHoveredIndex(null)}
+                >
                 <CardContent className="p-0 relative">
                   <img
                     src={collection.image}
@@ -75,6 +76,7 @@ export default function Collections() {
                   </div>
                 </CardContent>
               </Card>
+              </Link>
             </motion.div>
           ))}
         </div>

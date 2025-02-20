@@ -23,8 +23,10 @@ function Router() {
 function App() {
   return (
     <QueryClientProvider client={queryClient}>
-      <Router />
-      <Toaster />
+      <div className="min-h-screen flex flex-col">
+        <Router />
+        <Toaster />
+      </div>
     </QueryClientProvider>
   );
 }
