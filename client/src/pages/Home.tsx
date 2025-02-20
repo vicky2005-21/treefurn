@@ -18,15 +18,18 @@ export default function Home() {
     // Simulate loading time
     const timer = setTimeout(() => {
       setLoading(false);
+    }, 2000);
+
+    if (!loading) {
       controls.start({
         opacity: 1,
         y: 0,
         transition: { duration: 0.8, ease: "easeOut" }
       });
-    }, 2000);
+    }
 
     return () => clearTimeout(timer);
-  }, [controls]);
+  }, [controls, loading]);
 
   if (loading) {
     return <LoadingScreen />;
