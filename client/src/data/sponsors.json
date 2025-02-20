@@ -1,0 +1,28 @@
+{
+  "sponsors": [
+    {
+      "id": 1,
+      "name": "Luxury Hotels Group",
+      "logo": "https://images.unsplash.com/photo-1571171637578-41bc2dd41cd2",
+      "description": "Premium Hotel Chain Partner"
+    },
+    {
+      "id": 2,
+      "name": "Corporate Spaces",
+      "logo": "https://images.unsplash.com/photo-1486406146926-c627a92ad1ab",
+      "description": "Office Infrastructure Partner"
+    },
+    {
+      "id": 3,
+      "name": "Design Studio Pro",
+      "logo": "https://images.unsplash.com/photo-1497366216548-37526070297c",
+      "description": "Interior Design Partner"
+    },
+    {
+      "id": 4,
+      "name": "Urban Living",
+      "logo": "https://images.unsplash.com/photo-1545324418-cc1a3fa10c00",
+      "description": "Residential Projects Partner"
+    }
+  ]
+} 

@@ -1,8 +1,10 @@
-import express, { type Request, Response, NextFunction } from "express";
+import express, { NextFunction, type Request, Response } from "express";
 import { registerRoutes } from "./routes";
-import { setupVite, serveStatic, log } from "./vite";
+import { log, serveStatic, setupVite } from "./vite";
 
 const app = express();
+const port = process.env.PORT || 3000; // Use PORT from environment variables or default to 3000
+
 app.use(express.json());
 app.use(express.urlencoded({ extended: false }));
 
@@ -58,8 +60,7 @@ app.use((req, res, next) => {
 
   // ALWAYS serve the app on port 5000
   // this serves both the API and the client
-  const PORT = 5000;
-  server.listen(PORT, "0.0.0.0", () => {
-    log(`serving on port ${PORT}`);
+  server.listen(port, "0.0.0.0", () => {
+    log(`serving on port ${port}`);
   });
 })();

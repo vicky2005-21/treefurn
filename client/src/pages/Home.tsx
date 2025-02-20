@@ -9,6 +9,7 @@ import Contact from "@/components/Contact";
 import Footer from "@/components/Footer";
 import LoadingScreen from "@/components/LoadingScreen";
 import { motion, useAnimation } from "framer-motion";
+import Sponsors from "@/components/Sponsors";
 
 export default function Home() {
   const [loading, setLoading] = useState(true);
@@ -47,6 +48,7 @@ export default function Home() {
         <About />
         <Collections />
         <Features />
+        <Sponsors />
         <Testimonials />
         <Contact />
       </main>

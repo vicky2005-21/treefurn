@@ -3,80 +3,6 @@ import { Button } from "@/components/ui/button";
 import { useEffect, useState } from "react";
 import { Link } from "wouter";
 
-const LeafAnimation = () => {
-  const leafVariants = {
-    initial: (i: number) => ({
-      opacity: 0,
-      y: Math.random() * -100,
-      x: Math.random() * window.innerWidth,
-      rotate: 0,
-      scale: 0.8 + Math.random() * 0.7, // Increased scale for bigger leaves
-    }),
-    animate: (i: number) => ({ 
-      opacity: [0, 1, 1, 0],
-      y: [
-        Math.random() * -100,
-        Math.random() * window.innerHeight * 0.3,
-        Math.random() * window.innerHeight * 0.6,
-        window.innerHeight
-      ],
-      x: [
-        Math.random() * window.innerWidth,
-        Math.random() * window.innerWidth,
-        Math.random() * window.innerWidth,
-        Math.random() * window.innerWidth
-      ],
-      rotate: [0, 180 + Math.random() * 180, 360 + Math.random() * 360],
-      transition: {
-        duration: 12 + Math.random() * 8, // Increased duration for slower movement
-        repeat: Infinity,
-        repeatType: "loop" as const,
-        ease: "easeInOut"
-      }
-    })
-  };
-
-  return (
-    <div className="fixed inset-0 overflow-hidden pointer-events-none z-0">
-      {[...Array(15)].map((_, i) => {
-        const randomDelay = Math.random() * 5;
-        const randomX = Math.random() * 100;
-        
-        return (
-          <motion.div
-            key={i}
-            className="absolute"
-            style={{
-              width: "40px",
-              height: "40px",
-              left: `${randomX}%`
-            }}
-            initial={{ y: -100, opacity: 0, rotate: 0 }}
-            animate={{ 
-              y: "120vh",
-              opacity: [0, 1, 1, 0],
-              rotate: 360,
-            }}
-            transition={{
-              duration: 8,
-              delay: randomDelay,
-              repeat: Infinity,
-              ease: "linear"
-            }}
-          >
-            {/* Replace the SVG with your image. You can pass an array of image URLs as props */}
-            <img 
-              src="/path-to-your-leaf-image.png" 
-              alt="leaf"
-              className="w-full h-full object-contain opacity-40"
-            />
-          </motion.div>
-        );
-      })}
-    </div>
-  );
-};
-
 const Counter = ({ end, duration = 2, label }: { end: number | string, duration?: number, label: string }) => {
   const [count, setCount] = useState(0);
   const controls = useAnimation();
@@ -138,8 +64,6 @@ export default function Hero() {
       id="home"
       className="min-h-[90vh] relative flex items-center justify-center overflow-hidden bg-gradient-to-b from-[#f8f3e9] to-white dark:from-gray-900 dark:to-gray-800"
     >
-      <LeafAnimation />
-
       <div className="container mx-auto px-4 relative z-10">
         <motion.div
           initial={{ opacity: 0, y: 20 }}

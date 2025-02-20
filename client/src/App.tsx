@@ -10,6 +10,7 @@ import ContactPage from "@/pages/Contact";
 
 import Navigation from "@/components/Navigation";
 import Footer from "@/components/Footer";
+import './styles/animations.css';
 
 function Layout({ children }: { children: React.ReactNode }) {
   return (

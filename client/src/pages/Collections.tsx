@@ -1,59 +1,36 @@
-import { useState } from "react";
+import { useState, useEffect } from "react";
 import { motion } from "framer-motion";
 import { Card, CardContent } from "@/components/ui/card";
 import LoadingScreen from "@/components/LoadingScreen";
 import Navigation from "@/components/Navigation";
 import Footer from "@/components/Footer";
-
-const collections = [
-  {
-    id: 1,
-    category: "Living Room",
-    items: [
-      {
-        id: "lv1",
-        name: "Modern Sofa Set",
-        image: "https://images.unsplash.com/photo-1493663284031-b7e3aefcae8e",
-        price: "₹45,999",
-        description: "Contemporary 3+1+1 sofa set with premium fabric"
-      },
-      {
-        id: "lv2",
-        name: "Coffee Table",
-        image: "https://images.unsplash.com/photo-1533090368676-1fd25485db88",
-        price: "₹12,999",
-        description: "Solid wood coffee table with glass top"
-      }
-    ]
-  },
-  {
-    id: 2,
-    category: "Bedroom",
-    items: [
-      {
-        id: "bd1",
-        name: "King Size Bed",
-        image: "https://images.unsplash.com/photo-1505693314120-0d443867891c",
-        price: "₹58,999",
-        description: "Premium teak wood bed with hydraulic storage"
-      },
-      {
-        id: "bd2",
-        name: "Wardrobe",
-        image: "https://images.unsplash.com/photo-1595428774223-ef52624120d2",
-        price: "₹35,999",
-        description: "4-door wardrobe with mirror and LED lighting"
-      }
-    ]
-  }
-];
+import { useLocation } from "wouter";
+import collectionsData from "@/data/collections.json";
 
 export default function CollectionsPage() {
   const [loading, setLoading] = useState(true);
   const [selectedCategory, setSelectedCategory] = useState<number>(1);
+  const [location] = useLocation();
+  
+  useEffect(() => {
+    // Get category from URL query parameter
+    const params = new URLSearchParams(window.location.search);
+    const category = params.get('category');
+    if (category) {
+      // Find the collection id based on the category name
+      const collection = collectionsData.collections.find(
+        c => c.category.toLowerCase().replace(' ', '-') === category
+      );
+      if (collection) {
+        setSelectedCategory(collection.id);
+      }
+    }
+  }, [location]);
 
-  // Simulate loading
-  setTimeout(() => setLoading(false), 2000);
+  useEffect(() => {
+    const timer = setTimeout(() => setLoading(false), 2000);
+    return () => clearTimeout(timer);
+  }, []);
 
   if (loading) return <LoadingScreen />;
 
@@ -72,7 +49,7 @@ export default function CollectionsPage() {
 
           {/* Category Navigation */}
           <div className="flex gap-4 mb-12 overflow-x-auto pb-4">
-            {collections.map((collection) => (
+            {collectionsData.collections.map((collection) => (
               <motion.button
                 key={collection.id}
                 whileHover={{ scale: 1.05 }}
@@ -91,7 +68,7 @@ export default function CollectionsPage() {
 
           {/* Products Grid */}
           <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-8">
-            {collections
+            {collectionsData.collections
               .find((c) => c.id === selectedCategory)
               ?.items.map((item, index) => (
                 <motion.div

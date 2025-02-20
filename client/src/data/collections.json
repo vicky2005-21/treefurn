@@ -1,0 +1,160 @@
+{
+  "collections": [
+    {
+      "id": 1,
+      "category": "Living Room",
+      "items": [
+        {
+          "id": "lv1",
+          "name": "Modern Sofa Set",
+          "image": "https://images.unsplash.com/photo-1493663284031-b7e3aefcae8e",
+          "price": "₹45,999",
+          "description": "Contemporary 3+1+1 sofa set with premium fabric"
+        },
+        {
+          "id": "lv2",
+          "name": "Coffee Table",
+          "image": "https://images.unsplash.com/photo-1533090368676-1fd25485db88",
+          "price": "₹12,999",
+          "description": "Solid wood coffee table with glass top"
+        },
+        {
+          "id": "lv3",
+          "name": "TV Unit",
+          "image": "https://images.unsplash.com/photo-1615873968403-89e068629265",
+          "price": "₹32,999",
+          "description": "Modern TV unit with storage compartments"
+        },
+        {
+          "id": "lv4",
+          "name": "Wall Unit",
+          "image": "https://images.unsplash.com/photo-1618220179428-22790b461013",
+          "price": "₹55,999",
+          "description": "Contemporary wall unit with display shelves"
+        }
+      ]
+    },
+    {
+      "id": 2,
+      "category": "Dining Room",
+      "items": [
+        {
+          "id": "dr1",
+          "name": "6-Seater Dining Set",
+          "image": "https://images.unsplash.com/photo-1617098900591-3f90928e8c54",
+          "price": "₹38,999",
+          "description": "Elegant 6-seater dining set with cushioned chairs"
+        },
+        {
+          "id": "dr2",
+          "name": "4-Seater Dining Set",
+          "image": "https://images.unsplash.com/photo-1617806118233-18e1de247200",
+          "price": "₹28,999",
+          "description": "Compact 4-seater dining set perfect for small spaces"
+        },
+        {
+          "id": "dr3",
+          "name": "Crockery Unit",
+          "image": "https://images.unsplash.com/photo-1594125674956-61a9b49c8ecc",
+          "price": "₹42,999",
+          "description": "Modern crockery unit with glass doors"
+        }
+      ]
+    },
+    {
+      "id": 3,
+      "category": "Bedroom",
+      "items": [
+        {
+          "id": "bd1",
+          "name": "King Size Bed",
+          "image": "https://images.unsplash.com/photo-1505693314120-0d443867891c",
+          "price": "₹58,999",
+          "description": "Premium teak wood bed with hydraulic storage"
+        },
+        {
+          "id": "bd2",
+          "name": "Queen Size Bed",
+          "image": "https://images.unsplash.com/photo-1505693416388-ac5ce068fe85",
+          "price": "₹48,999",
+          "description": "Elegant queen size bed with side tables"
+        },
+        {
+          "id": "bd3",
+          "name": "Wardrobe",
+          "image": "https://images.unsplash.com/photo-1595428774223-ef52624120d2",
+          "price": "₹35,999",
+          "description": "4-door wardrobe with mirror and LED lighting"
+        },
+        {
+          "id": "bd4",
+          "name": "Dressing Table",
+          "image": "https://images.unsplash.com/photo-1609799693892-25e8087d0bc3",
+          "price": "₹18,999",
+          "description": "Modern dressing table with storage"
+        }
+      ]
+    },
+    {
+      "id": 4,
+      "category": "Office",
+      "items": [
+        {
+          "id": "of1",
+          "name": "Executive Chair",
+          "image": "https://images.unsplash.com/photo-1589384267710-7a170981ca78",
+          "price": "₹12,999",
+          "description": "Ergonomic executive chair with lumbar support"
+        },
+        {
+          "id": "of2",
+          "name": "Computer Desk",
+          "image": "https://images.unsplash.com/photo-1518455027359-f3f8164ba6bd",
+          "price": "₹15,999",
+          "description": "Modern computer desk with cable management"
+        },
+        {
+          "id": "of3",
+          "name": "Airport Sofa",
+          "image": "https://images.unsplash.com/photo-1567538096630-e0c55bd6374c",
+          "price": "₹32,999",
+          "description": "3-seater airport style waiting area sofa"
+        },
+        {
+          "id": "of4",
+          "name": "Rocking Chair",
+          "image": "https://images.unsplash.com/photo-1561677843-39dee7a319ca",
+          "price": "₹8,999",
+          "description": "Comfortable rocking chair for relaxation"
+        }
+      ]
+    },
+    {
+      "id": 5,
+      "category": "Modular Kitchen",
+      "items": [
+        {
+          "id": "mk1",
+          "name": "L-Shaped Kitchen",
+          "image": "https://images.unsplash.com/photo-1556911220-e15b29be8c8f",
+          "price": "₹1,25,999",
+          "description": "Modern L-shaped modular kitchen with premium fittings"
+        },
+        {
+          "id": "mk2",
+          "name": "Straight Kitchen",
+          "image": "https://images.unsplash.com/photo-1556909212-d5b604d0c90d",
+          "price": "₹89,999",
+          "description": "Straight line modular kitchen design"
+        },
+        {
+          "id": "mk3",
+          "name": "U-Shaped Kitchen",
+          "image": "https://images.unsplash.com/photo-1556909190-eccf4a8bf97a",
+          "price": "₹1,45,999",
+          "description": "Spacious U-shaped kitchen with island counter"
+        }
+      ]
+    }
+  ]
+} 
