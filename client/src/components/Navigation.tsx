@@ -84,7 +84,7 @@ export default function Navigation() {
         className="md:hidden fixed bottom-6 inset-x-0 z-50 flex justify-center"
       >
         <motion.div 
-          className="flex items-center justify-center gap-8 backdrop-blur-md bg-white/90 rounded-full shadow-lg px-8 py-4 mx-4"
+          className="flex items-center justify-center gap-8 backdrop-blur-md bg-white/90 rounded-full shadow-lg px-8 py-5 mx-4"
           whileHover={{ scale: 1.02 }}
         >
           {navLinks.map((link) => {
@@ -98,12 +98,12 @@ export default function Navigation() {
                 <Link 
                   href={link.href}
                   onClick={() => handleNavClick(link.href)}
-                  className={`text-gray-600 hover:text-primary transition-colors ${
+                  className={`text-gray-600 hover:text-primary transition-colors font-bold text-lg ${
                     location === link.href ? "text-primary" : ""
                   }`}
                   title={link.name}
                 >
-                  <Icon className="w-6 h-6" />
+                  <Icon className="w-7 h-7" />
                 </Link>
               </motion.div>
             );
